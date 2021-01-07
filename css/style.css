@@ -1,0 +1,743 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(8, 0, 225);
+    color: white;
+    /* cursor: none; */
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.cursor{
+    width: 25px;
+    height: 25px;
+    border: 2px white solid;
+    border-radius: 50%;
+    position: absolute;
+    transition-timing-function: ease-out;
+    animation: cursoranime .5s infinite alternate;
+}
+
+.cursor::after{
+    content: "";
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    border: 8px solid black;
+    border-radius: 50%;
+    opacity: 0.5;
+    top: -10px;
+    left: -10px;
+    animation: cursoranime2 .5s infinite alternate;
+}
+
+@keyframes cursoranime{
+    from{
+        transform: scale(1.5);
+    }
+    to{
+        transform: scale(.9);
+    }
+}
+
+@keyframes cursoranime2{
+    from{
+        transform: scale(1.5);
+    }
+    to{
+        transform: scale(.4);
+    }
+}
+
+.expand{
+    animation: cursoranime3 .5s forwards;
+    border: 2px solid red;
+}
+
+@keyframes cursoranime3{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform: scale(5);
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+header{
+    height: 110vh;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    padding: 2rem 3rem;
+}
+
+header nav h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+header nav h2{
+    font-size: 1.4rem;
+    font-weight: bold;
+    transition: all .5s ease;
+    cursor: pointer; 
+}
+
+header nav h2:hover{
+    color: yellow;
+}
+
+header  i{
+    top: 2.3rem;
+    position: fixed;
+    animation:drive 5s infinite;
+    animation-timing-function: linear;
+    font-size: 1.5rem;
+}
+
+@keyframes drive{
+    0%{
+        left: 0;
+    }
+    10%{
+        left: 10rem;
+    }
+    20%{
+        left: 20rem;
+    }
+    30%{
+        left: 30rem;
+    }
+    40%{
+        left: 40rem;
+    }
+    50%{
+        left: 50rem;
+    }
+    60%{
+        left: 60rem;
+    }
+    70%{
+        left: 70rem;
+    }
+    80%{
+        left: 80rem;
+    }
+    90%{
+        left: 90rem;
+    }
+    100%{
+        left: 100rem;
+    }
+}
+
+header main{
+    width: 100%;
+}
+
+header  main video{
+    width: 100%;
+    height: auto;
+    margin-top: -1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    cursor: pointer;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+}
+
+.intro h1{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.intro p{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 40%;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    word-spacing: 2px;
+    font-weight: 400;
+}
+
+.intro a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-top: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all .5s ease;
+}
+
+.intro a:hover{
+    color: yellow;
+}
+
+.what{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.what .heading{
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    z-index: -1;
+    color: white;
+    font-size: 12rem;
+    font-weight: bold;
+    letter-spacing: -10px;
+}
+
+.what  .photo{
+    position: relative;
+    z-index: 1;
+    top: -12rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.what .shadow{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    top: -10rem;
+}
+
+.what .shadow .sha1{
+    width: 5rem;
+}
+
+.what .what-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.what .what-info .card{
+    width: 14rem;
+    text-align: center;
+    position: relative;
+    top: -9rem;
+}
+
+.what .what-info .card h1{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.what .what-info .card p{
+    margin-top: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.review{
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.review .review-letter{
+    background-color: white;
+    padding: 2rem 2rem;
+    width: 50%;
+}
+
+.review .review-letter p{
+    font-size: 2.2rem;
+    color: #0016dd;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+.review .review-letter h6{
+    font-size: 1rem;
+    font-weight: 400;
+    color: black;
+}
+
+.work{
+    text-align: center;
+    height: 91vh;
+    overflow: hidden;
+}
+
+.work h1{
+    font-size: 14rem;
+    font-weight: bold;
+    color: white;
+}
+
+.work img{
+    position: relative;
+    top: -9rem;
+    width: 100%;
+    height: auto;
+}
+
+.first{
+    height: 90vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 4rem 0;
+}
+
+.first a{
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding:1rem 3rem;
+    color: #ef6eae;
+    --hover: #ef8f6e;
+    background-color: black;
+}
+
+.first a:hover,
+.first a:focus {
+  -webkit-animation: pulse 1s;
+          animation: pulse 1s;
+  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+  color: #ef8f6e;
+}
+
+@keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 var(--hover);
+    }
+  }
+
+.second{
+    height: 90vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 4rem 0;
+}
+
+.second a{
+    text-decoration: none;
+    background-color:black;
+    font-size: 2rem;
+    font-weight: bold;
+    padding:1rem 3rem;
+    color: #ef6eae;
+    --hover: #ef8f6e;
+
+}
+
+
+.second a:hover,
+.second a:focus {
+  -webkit-animation: pulse 1s;
+          animation: pulse 1s;
+  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+  color: #ef8f6e;
+}
+
+.third{
+    height: 90vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 4rem 0;
+}
+
+.third a{
+    text-decoration:none;
+    color: #ef6eae;
+    --hover: #ef8f6e;
+    background-color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    padding:1rem 3rem;
+}
+
+.third a:hover,
+.third a:focus {
+  -webkit-animation: pulse 1s;
+          animation: pulse 1s;
+  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+  color: #ef8f6e;
+}
+
+.fourth{
+    height: 90vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 4rem 0;
+}
+
+.fourth a{
+    text-decoration: none;
+    color: #ef6eae;
+    --hover: #ef8f6e;
+    background-color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    padding:1rem 3rem;
+}
+
+.fourth a:hover,
+.fourth a:focus {
+  -webkit-animation: pulse 1s;
+          animation: pulse 1s;
+  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+  color: #ef8f6e;
+}
+
+.last{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 4rem 0;
+}
+
+.last h1{
+    font-size: 2.2rem;
+    width: 20rem;
+}
+
+.last p{
+    font-size: 0.8rem;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50%;
+    margin-top: 1rem;
+    line-height: 18px;
+}
+
+.last .last-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.last .last-info .last-card{
+    width: 18rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.last .last-info .last-card h2{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+footer {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #000000;
+    padding-top: 3rem;
+}
+
+footer .top-foot{
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+footer .top-foot .foot{
+    width: 10rem;
+}
+
+footer  .top-foot .foot h4{
+    font-weight: bold;
+    animation: change-color 10s ease-in-out infinite;
+}
+
+@keyframes change-color{
+    0%{
+        color: red;
+    }
+    20%{
+        color: green;
+    }
+    40%{
+        color: yellow;
+    }
+    60%{
+        color: violet;
+    }
+    80%{
+        color: gold;
+    }
+    100%{
+        color: white;
+    }
+}
+
+footer .top-foot .foot p{
+    font-size: 0.8rem;
+}
+
+footer .second-foot{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding:0 2.5rem ;
+    margin-top: 4rem;
+}
+
+footer .second-foot img{
+    width: 5rem;
+    height: auto;
+}
+
+footer .second-foot .foot-2{
+    width: 14rem;
+    text-align: right;
+}
+
+footer .second-foot .foot-2 h4{
+    animation: change-color 10s ease-in-out infinite;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+footer .second-foot .foot-2 p{
+    font-size: 0.8rem;
+}
+
+footer .last-foot{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3rem;
+    width: 100%;
+}
+
+footer .last-foot .foot-3{
+    width: 25rem;
+}
+
+footer .last-foot .foot-3 h2{
+    font-size: 1rem;
+    font-weight: 400;
+    animation: change-color 10s ease-in-out infinite;
+}
+
+footer .last-foot .foot-3 p{
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+footer .last-foot h4{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+footer .bike{
+    width: 100%;
+}
+
+footer .bike i {
+    position: relative;
+    bottom: 0;
+    left: 0rem;
+    animation: driving 5s infinite;
+    animation-timing-function: linear;
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+@keyframes driving{
+    0%{
+        left:0;
+    }
+    10%{
+        left: 10%;
+    }
+    20%{
+        left: 20%;
+    }
+    30%{
+        left: 30%;
+    }
+    40%{
+        left: 40%;
+    }
+    50%{
+        left: 50%;
+    }
+    60%{
+        left: 60%;
+    }
+    70%{
+        left: 70%;
+    }
+    80%{
+        left: 80%;
+    }
+    90%{
+        left: 90%;
+    }
+    100%{
+        left: 96%;
+    }
+}
+
+/* end */
+
+@media(max-width:1000px){
+    header {
+        height: 80vh;
+    }
+    .intro{
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .what .shadow{
+        display: none;
+    }
+    .what .photo{
+        max-width: 600px;
+        display: flex;
+        flex-direction: row;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+        top: -15rem;
+    }
+    .what .photo img{
+        padding: 2rem;
+    }
+    .what .what-info{
+        max-width: 600px;
+        flex-flow: row wrap;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        top: -5rem;
+        position: relative;
+    }
+    .what .what-info .card{
+        margin: 0 2rem;
+        margin-top: 1rem;
+    } 
+    .what .what-info .card h1{
+        margin-bottom: -1rem;
+    }
+    .what{
+        height: 120vh;
+        margin-top: 6rem;
+    }
+    .work{
+        display: none;
+    }
+    .last{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .last .last-info {
+        max-width: 600px;
+        display: flex;
+        flex-direction: row;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    footer .top-foot {
+        max-width: 600px;
+        flex-flow: row wrap;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-around;
+        text-align: center;
+    }
+    footer .top-foot .foot{
+        margin-top: 2rem;
+    }
+    .first{
+        padding: 0;
+        padding-bottom: 8rem;
+    }
+    .second{
+        padding: 0;
+        padding-bottom: 8rem;
+    }
+    .third{
+        padding: 0;
+        padding-bottom: 8rem;
+    }
+    .fourth{
+        padding: 0;
+        padding-bottom: 8rem;
+    }
+}
+
+@media(max-width:800px){
+    .review{
+        width: 100%;
+        max-width: auto;
+    }
+    .review .review-letter p{
+        font-size: 1rem;
+    }
+}
